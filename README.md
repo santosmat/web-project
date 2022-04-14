@@ -1,7 +1,8 @@
 # web-project
 ## Requirements: 
 The requirements are given in the assignment, but you have to add any new requirements needed by your particular store implementation.
-## Project Description: Describe how your project implements the functionality in the requirements. Diagrams can help a lot here.
+## Project Description:
+Describe how your project implements the functionality in the requirements. Diagrams can help a lot here.
 ## Comments About the Code: 
 Any comment you may want to add to help understand your code. This is good programming practice.
 ## Test Plan:
