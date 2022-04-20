@@ -1,6 +1,7 @@
 # web-project
 
 Mateus de Souza Santos 11366913
+Leonardo Gabriel Fusineli Silva 11218841
 
 ## Requirements: 
 The requirements are given in the assignment, but you have to add any new requirements needed by your particular store implementation.
