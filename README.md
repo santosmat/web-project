@@ -4,6 +4,10 @@ Mateus de Souza Santos 11366913
 
 Leonardo Gabriel Fusineli Silva 11218841
 
+## Mockup
+
+https://www.figma.com/file/RQKM6Qg41ATPenkY6mN88S/Web-Project?node-id=19%3A90
+
 ## Requirements: 
 The requirements are given in the assignment, but you have to add any new requirements needed by your particular store implementation.
 ## Project Description:
