@@ -11,7 +11,7 @@ https://www.figma.com/file/RQKM6Qg41ATPenkY6mN88S/Web-Project?node-id=19%3A90
 ## Requirements: 
 The requirements are given in the assignment, but you have to add any new requirements needed by your particular store implementation.
 ## Project Description:
-Describe how your project implements the functionality in the requirements. Diagrams can help a lot here.
+Site de venda de livros.
 ## Comments About the Code: 
 Any comment you may want to add to help understand your code. This is good programming practice.
 ## Test Plan:
