@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Home</title>
+</head>
+<body>
+    <div class="top-bar">
+        <div id="search-box">
+            <input type="text" id="search-camp">
+            <a href=""><img id="search-icon" src="./Assets/search-icon.png"></a>
+        </div>
+        <div id="top-bar-right-content">
+            <button id="sing-in" class="top-bar-element">
+                    <a href="">Sing in</a> 
+            </button>
+            <button id="register" class="top-bar-element">
+                <a href="">Cadastre - se</a>
+            </button>
+            <a href="">
+                <img id="carrinho-compra" src="./Assets/carrinho-compra.png" alt="">
+            </a>
+        </div>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">Page 1</a></li>
+            <li><a href="">Page 2</a></li>
+        </ul>
+    </nav>
+        <div class="container-forms">
+            <form>
+                <label for="nome">Nome:</label><br>
+                <input type="text" id="nome" name="nome"  placeholder="Digite seu nome completo"><br>
+                <label for="email">Email:</label><br>
+                <input type="text" id="email" name="email"  placeholder="Digite seu email"><br>
+                <label for="birthday">Data de nascimento:</label><br>
+                <input type="date" id="birthday" name="birthday"  placeholder="dd/mm/yyyy"><br>
+                <label for="cpf">CPF:</label><br>
+                <input type="text" id="cpf" name="cpf"  placeholder="Digite seu CPF"><br>
+                <label for="password">Senha:</label><br>
+                <input type="password" id="password" name="password" placeholder="Digite sua senha"><br>
+                <label for="passwordverification">Repetir senha:</label><br>
+                <input type="password" id="passwordverification" name="passwordverification" placeholder="Repita sua senha"><br>
+                <input type="button" class="enviar" value="Cadastrar">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
