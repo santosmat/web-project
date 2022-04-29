@@ -1,7 +1,9 @@
 # web-project
 
-Mateus de Souza Santos 11366913
-Fabio Henrique Alves Cavaleti 11200550
+Mateus de Souza Santos 11366913 
+
+Fabio Henrique Alves Cavaleti 11200550 
+
 Leonardo Gabriel Fusineli Silva 11218841
 
 ## Mockup
