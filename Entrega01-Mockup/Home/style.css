@@ -174,9 +174,10 @@ input{
 
 
 .book{
-    width: 250px;
-    height: 300px;
-    line-height: 300px;
+    width: 30%;
+    height: 45%;
     background-color: aliceblue;
+    box-sizing: border-box;
+    padding-top: 50px;
     text-align: center;
 }
