@@ -5,9 +5,9 @@ import NavbarItem from './NavbarItem';
 const NavBar = (props) => {
     return ( 
         <nav>
-            <NavbarItem link='#home' name='item1'></NavbarItem>
-            <NavbarItem link='#home' name='item2'></NavbarItem>
-            <NavbarItem link='#home' name='item3'></NavbarItem>
+            <NavbarItem link='#home' name='Mais vendidos'></NavbarItem>
+            <NavbarItem link='#home' name='Lançamentos'></NavbarItem>
+            <NavbarItem link='#home' name='Todos'></NavbarItem>
         </nav>
      );
 }
