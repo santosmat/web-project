@@ -5,6 +5,11 @@
     outline: none;
 }
 
+a, a:link, a:hover{
+  text-decoration: none;
+  color: black;
+}
+
 body{
   background-color: #ddd;
 }

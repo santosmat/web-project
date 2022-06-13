@@ -51,8 +51,11 @@ function App() {
           <NavBar></NavBar>
 
           <Routes>
-            <Route path='/bookpage' element={<BookPage/>} />
+            <Route path='/bookpage/:id' element={<BookPage bookList={bookList}/>} />
             <Route exact path="/" element={<Home bookList={bookList}/>} />
+            <Route path="*" element={
+              <div> Caminho nao existe</div>
+            } />
          </Routes>
             
           

@@ -1,6 +1,7 @@
 import React from 'react';
 import './Card.css'
 import capa from '../Assets/livroGenerico.jpg'
+import { Link } from 'react-router-dom';
 
 const Card = ({book}) => {
     return ( 
@@ -12,7 +13,7 @@ const Card = ({book}) => {
             <div className='price-value'>
                 <strong>{book.valor}</strong>
             </div>
-            <button className='saiba-mais-btn'>SAIBA MAIS</button>
+            <button className='saiba-mais-btn'><Link to={`/bookpage/${book.id}`}>SAIBA MAIS</Link></button>
 
             
         </div>

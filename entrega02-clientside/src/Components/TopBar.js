@@ -1,23 +1,27 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './TopBar.css'
 
 const TopBar = (props) => {
     return ( 
         <div className='top-bar'>
-            <a>
+            <Link to='/'>
                 Bookstore
-            </a>
+            </Link>
             <div className='nav-itens'>
 
-                <a>
+                <Link to='/'>
                     sign in
-                </a>
-                <a>
+                </Link>
+                
+                <Link to='/'>
                     Sign up
-                </a>
-                <a>
+                </Link>
+                
+                <Link to='/'>
                     Carrinho
-                </a>
+                </Link>
+                
 
             </div>
 
