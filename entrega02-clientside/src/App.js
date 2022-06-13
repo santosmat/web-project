@@ -6,14 +6,16 @@ import { useEffect, useState } from 'react';
 import Book from './Components/Book';
 import Card from './Components/Card'
 import Home from './Components/Home'
+import BookInfo from './Components/BookPage'
 
 import {BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import BookPage from './Components/BookPage';
 
 function App() {
 
 
 
-  const [bookList, setList] = useState([new Book("Harry Potter e a Pedra Filosofal", "J. K. Rowling", 40, "a", 1, "Primeiro livro da franquia..."), new Book("A Rainha Vermelha - Vol. 1", "Aveyard,Victoria", 44.99, "a", 1, "Primeiro livro da franquia..."), new Book("A Rainha Vermelha - Vol. 2", "Aveyard,Victoria", 44.99, "a", 1, "Segundo livro da franquia..."), new Book("A Rainha Vermelha - Vol. 3", "Aveyard,Victoria", 44.99, "a", 1, "Terceiro livro da franquia...")]);
+  const [bookList, setList] = useState([new Book("Harry Potter e a Pedra Filosofal", "J. K. Rowling", 40.00, "a", 1, "Primeiro livro da franquia..."), new Book("A Rainha Vermelha - Vol. 1", "Aveyard,Victoria", 44.99, "a", 1, "Primeiro livro da franquia..."), new Book("A Rainha Vermelha - Vol. 2", "Aveyard,Victoria", 44.99, "a", 1, "Segundo livro da franquia..."), new Book("A Rainha Vermelha - Vol. 3", "Aveyard,Victoria", 44.99, "a", 1, "Terceiro livro da franquia...")]);
   const [cart, setCart] = useState([]);
 
 
@@ -34,7 +36,7 @@ function App() {
   
   const startList = () =>
   {
-     addBook("Harry Potter e a Pedra Filosofal", "J. K. Rowling", 40, "a", 1, "Primeiro livro da franquia...")
+     addBook("Harry Potter e a Pedra Filosofal", "J. K. Rowling", 40.00, "a", 1, "Primeiro livro da franquia...")
      addBook("A Rainha Vermelha - Vol. 1", "Aveyard,Victoria", 44.99, "a", 1, "Primeiro livro da franquia...")
      addBook("A Rainha Vermelha - Vol. 2", "Aveyard,Victoria", 44.99, "a", 1, "Segundo livro da franquia...")
      addBook("A Rainha Vermelha - Vol. 3", "Aveyard,Victoria", 44.99, "a", 1, "Terceiro livro da franquia...")
@@ -49,6 +51,7 @@ function App() {
           <NavBar></NavBar>
 
           <Routes>
+            <Route path='/bookpage' element={<BookPage/>} />
             <Route exact path="/" element={<Home bookList={bookList}/>} />
          </Routes>
             
