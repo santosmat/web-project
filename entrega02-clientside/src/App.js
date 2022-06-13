@@ -5,6 +5,9 @@ import Footer from './Components/Footer'
 import { useEffect, useState } from 'react';
 import Book from './Components/Book';
 import Card from './Components/Card'
+import Home from './Components/Home'
+
+import {BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
 function App() {
 
@@ -39,21 +42,22 @@ function App() {
   }
   
   return (
-    <div className="App">
-      <TopBar></TopBar>
-      <NavBar></NavBar>
-      <div className='container'>
-        <ul className='books-container'>
-          {bookList.map(book =>
-            <li className='book-item'>
-              <Card book={book} key={book.id}></Card>
-            </li>
-          )}  
+    <Router>
 
-        </ul>
-      </div>
-      <Footer></Footer>
-    </div>
+        <div className="App">
+          <TopBar></TopBar>
+          <NavBar></NavBar>
+
+          <Routes>
+            <Route exact path="/" element={<Home bookList={bookList}/>} />
+         </Routes>
+            
+          
+
+              
+          <Footer></Footer>
+        </div>
+    </Router>
   );
 }
 
