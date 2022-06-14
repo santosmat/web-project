@@ -1,8 +1,21 @@
 import React from 'react';
 import './InfoCard.css'
 import capa from '../Assets/livroGenerico.jpg'
+import { useNavigate } from 'react-router-dom';
 
-const InfoCard = ({book}) => {
+const InfoCard = ({book, addItem}) => {
+
+    const navigate = useNavigate();
+
+    const handleAddClick = () => {
+        addItem(book)
+        window.alert("Item adicionado ao carrinho")
+    }
+
+    const handleBuyClick = () => {
+        addItem(book)
+        navigate('/cart')
+    }
 
 
     return ( 
@@ -16,9 +29,9 @@ const InfoCard = ({book}) => {
                         <h1 className='book-title'>{book.titulo}</h1>
                         <h3 className='book-subtitle'>Autor: {book.autores} | Editora: {book.editora}</h3>
                         <h2 className='book-value'>R${book.valor}</h2>
-                        <button className='add-chart-btn btn'>Adicionar ao carrinho</button>
+                        <button onClick={handleAddClick} className='add-chart-btn btn'>Adicionar ao carrinho</button>
                         <br />
-                        <button className='buy-btn btn'>Comprar</button>
+                        <button onClick={handleBuyClick} className='buy-btn btn'>Comprar</button>
 
                     </div>
                 </div>

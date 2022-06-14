@@ -4,7 +4,7 @@ import DescriptionCard from './DescriptionCard';
 import InfoCard from './InfoCard';
 import Details from './Details';
 
-const BookPage = ({bookList}) => {
+const BookPage = ({bookList, addItem}) => {
 
     const params = useParams()
     const [book, setBook] = useState(bookList.filter(book => book.id == params.id)[0]);
@@ -18,7 +18,7 @@ const BookPage = ({bookList}) => {
 
     return ( 
         <>
-            <InfoCard book={book}/>
+            <InfoCard book={book} addItem={addItem}/>
             <DescriptionCard book={book} />
             <Details book={book}/>
         </>

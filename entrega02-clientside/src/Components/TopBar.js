@@ -18,7 +18,7 @@ const TopBar = (props) => {
                     Sign up
                 </Link>
                 
-                <Link to='/'>
+                <Link to='/cart'>
                     Carrinho
                 </Link>
                 

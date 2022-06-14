@@ -10,6 +10,7 @@ import BookInfo from './Components/BookPage'
 
 import {BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import BookPage from './Components/BookPage';
+import CartPage from './Components/CartPage';
 
 function App() {
 
@@ -17,6 +18,20 @@ function App() {
 
   const [bookList, setList] = useState([new Book("Harry Potter e a Pedra Filosofal", "J. K. Rowling", 40.00, "a", 1, "Primeiro livro da franquia..."), new Book("A Rainha Vermelha - Vol. 1", "Aveyard,Victoria", 44.99, "a", 1, "Primeiro livro da franquia..."), new Book("A Rainha Vermelha - Vol. 2", "Aveyard,Victoria", 44.99, "a", 1, "Segundo livro da franquia..."), new Book("A Rainha Vermelha - Vol. 3", "Aveyard,Victoria", 44.99, "a", 1, "Terceiro livro da franquia...")]);
   const [cart, setCart] = useState([]);
+
+  const addItem = (item) => {
+    setCart([...cart, item]);
+  }
+
+  const clearCart = () =>{
+    setCart([]);
+  }
+
+  const deleteItem = (item) =>
+  {
+    let filteredCart = cart.filter(i => i.id !== item.id)
+    setCart(filteredCart);
+  }
 
 
   
@@ -51,7 +66,8 @@ function App() {
           <NavBar></NavBar>
 
           <Routes>
-            <Route path='/bookpage/:id' element={<BookPage bookList={bookList}/>} />
+            <Route path='/bookpage/:id' element={<BookPage bookList={bookList} addItem={addItem}/>} />
+            <Route path='/cart' element={<CartPage cart={cart} deleteItem={deleteItem} clearCart={clearCart}/>} />
             <Route exact path="/" element={<Home bookList={bookList}/>} />
             <Route path="*" element={
               <div> Caminho nao existe</div>
