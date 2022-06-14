@@ -15,7 +15,8 @@
 }
 
 .cart-item{
-    text-align: left;
+    display: flex;
+    justify-content: space-between;
     margin: 5px;
     padding: 5px;
     border-bottom: 1px solid #ddd;
@@ -25,7 +26,7 @@
     margin: 10px;
     padding: 20px;
     width: 40%;
-    color: #323a46;
+    color: #000;
     font-size: 24px;
     font-weight: 700;
     background-color: rgba(81, 122, 255, 0.90);
@@ -38,10 +39,58 @@
     margin: 10px;
     padding: 20px;
     width: 40%;
-    color: #323a46;
+    color: #000;
     font-size: 24px;
     font-weight: 700;
     background-color: rgba(81, 122, 255, 0.90);
     box-shadow: 0 0 0 0, 0 0 0 0;
     border: 1px solid;
 }
+
+.delete-item-btn{
+    color: red;
+    text-decoration: none;
+    background-color: #fff;
+    border: none;
+    font-size: 20px;
+}
+
+.delete-item-btn:hover{
+    cursor: pointer;
+}
+
+.cart-product-img{
+    width: 50px;
+    height: 50px;
+}
+
+.left{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.left span{
+    margin-left: 15px;
+}
+
+.right{
+    display: flex;
+    align-items: center;
+}
+
+.right button{
+    margin-left: 20px;
+}
+
+.right span{
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.final-value{
+    margin: 30px;
+    padding: 20px;
+    font-size: 30px;
+    font-weight: 700;
+}
+
