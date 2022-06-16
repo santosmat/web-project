@@ -8,6 +8,8 @@ import Card from './Components/Card'
 import Home from './Components/Home'
 import BookInfo from './Components/BookPage'
 
+import Payment from './Components/Payment';
+
 import {BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import BookPage from './Components/BookPage';
 import CartPage from './Components/CartPage';
@@ -67,6 +69,7 @@ function App() {
 
           <Routes>
             <Route path='/bookpage/:id' element={<BookPage bookList={bookList} addItem={addItem}/>} />
+            <Route path='/payment' element={<Payment cart={cart} clearCart={clearCart} />} />
             <Route path='/cart' element={<CartPage cart={cart} deleteItem={deleteItem} clearCart={clearCart}/>} />
             <Route exact path="/" element={<Home bookList={bookList}/>} />
             <Route path="*" element={

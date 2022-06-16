@@ -1,0 +1,30 @@
+
+.form{
+    width: 80%;
+    margin: auto;
+    box-sizing: border-box;
+    padding: 30px;
+}
+
+.form input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0px;
+    box-sizing: border-box;
+  }
+
+.payment-submit{
+    display: block;
+    margin: 10px auto;
+    padding: 20px;
+    width: 40%;
+    color: #000;
+    font-size: 24px;
+    font-weight: 700;
+    background-color: rgba(81, 122, 255, 0.90);
+    box-shadow: 0 0 0 0, 0 0 0 0;
+    border: 1px solid;
+}
+
+
+

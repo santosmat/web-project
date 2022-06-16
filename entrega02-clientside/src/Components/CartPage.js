@@ -62,7 +62,9 @@ const CartPage = ({cart, setCart, deleteItem, clearCart}) => {
                 <span>{total > 0.0 ? `Total: R$${total}` : `o carrinho está vazio`}</span>
             </div>
 
-            <button onClick={handleClickBuy} className='buy-cart-btn btn'>Finalizar Compra</button>
+                <Link to='/payment'>
+                    <button onClick={handleClickBuy} className='buy-cart-btn btn'>Finalizar Compra</button>
+                </Link>
                         <br />
                         <button onClick={handleClickClear} className='clear-cart-btn btn'>Limpar carrinho</button>
         </div>
