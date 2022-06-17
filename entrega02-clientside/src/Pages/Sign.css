@@ -1,19 +1,18 @@
-
-.form{
-    width: 80%;
-    margin: auto;
+.sign-in{
+    width: 40%;
+    margin: 30px auto;
     box-sizing: border-box;
     padding: 30px;
 }
 
-.form input {
+.login-form input{
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0px;
     box-sizing: border-box;
-  }
+}
 
-.payment-submit{
+.sign-btn{
     display: block;
     margin: 10px auto;
     padding: 20px;
@@ -25,6 +24,3 @@
     box-shadow: 0 0 0 0, 0 0 0 0;
     border: 1px solid;
 }
-
-
-

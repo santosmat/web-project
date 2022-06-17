@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import DescriptionCard from './DescriptionCard';
-import InfoCard from './InfoCard';
-import Details from './Details';
+import DescriptionCard from '../Components/DescriptionCard';
+import InfoCard from '../Components/InfoCard';
+import Details from '../Components/Details';
 
 const BookPage = ({bookList, addItem}) => {
 
+    // PEGANDO DADOS DO LIVRO 
     const params = useParams()
     const [book, setBook] = useState(bookList.filter(book => book.id == params.id)[0]);
 

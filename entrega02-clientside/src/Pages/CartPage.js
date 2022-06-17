@@ -8,8 +8,6 @@ const CartPage = ({cart, setCart, deleteItem, clearCart}) => {
     
     
     const handleClickBuy = () => {
-        window.alert("Finalizar compra")
-        clearCart();
     }
 
     const handleClickClear = () =>{

@@ -5,22 +5,31 @@ import Footer from './Components/Footer'
 import { useEffect, useState } from 'react';
 import Book from './Components/Book';
 import Card from './Components/Card'
-import Home from './Components/Home'
-import BookInfo from './Components/BookPage'
+import Home from './Pages/Home'
+import BookInfo from './Pages/BookPage'
 
-import Payment from './Components/Payment';
+import Payment from './Pages/Payment';
 
 import {BrowserRouter as Router, Route, Routes } from 'react-router-dom'
-import BookPage from './Components/BookPage';
-import CartPage from './Components/CartPage';
+import BookPage from './Pages/BookPage';
+import CartPage from './Pages/CartPage';
+import SignIn from './Pages/SignIn';
+import SignUp from './Pages/SignUp';
+
+import users from './DataBases/userDB'
 
 function App() {
 
 
+  // Lidando com login no front end
+  const [login, setLogin] = useState(localStorage.getItem('isLogged') != undefined ? localStorage.getItem('isLogged'): false ) // Verifica se o usuario está logado ou nao 
 
+
+  // Lista de livros disponiveis e itens do carrinho
   const [bookList, setList] = useState([new Book("Harry Potter e a Pedra Filosofal", "J. K. Rowling", 40.00, "a", 1, "Primeiro livro da franquia..."), new Book("A Rainha Vermelha - Vol. 1", "Aveyard,Victoria", 44.99, "a", 1, "Primeiro livro da franquia..."), new Book("A Rainha Vermelha - Vol. 2", "Aveyard,Victoria", 44.99, "a", 1, "Segundo livro da franquia..."), new Book("A Rainha Vermelha - Vol. 3", "Aveyard,Victoria", 44.99, "a", 1, "Terceiro livro da franquia...")]);
   const [cart, setCart] = useState([]);
 
+  /*GERENCIAMENTO DO CARRINHO */
   const addItem = (item) => {
     setCart([...cart, item]);
   }
@@ -36,7 +45,7 @@ function App() {
   }
 
 
-  
+  /* GERENCIAMENTO DOS LIVROS */
   const addBook = (titulo, autores, valor, editora, edicao, descricao) =>
   {
     let book = new Book(titulo, autores, valor, editora, edicao, descricao);
@@ -50,27 +59,23 @@ function App() {
     let filteredList = bookList.filter(item => item.id !== book.id)
     setList(filteredList)
   }
+
   
-  const startList = () =>
-  {
-     addBook("Harry Potter e a Pedra Filosofal", "J. K. Rowling", 40.00, "a", 1, "Primeiro livro da franquia...")
-     addBook("A Rainha Vermelha - Vol. 1", "Aveyard,Victoria", 44.99, "a", 1, "Primeiro livro da franquia...")
-     addBook("A Rainha Vermelha - Vol. 2", "Aveyard,Victoria", 44.99, "a", 1, "Segundo livro da franquia...")
-     addBook("A Rainha Vermelha - Vol. 3", "Aveyard,Victoria", 44.99, "a", 1, "Terceiro livro da franquia...")
-     
-  }
+  
   
   return (
     <Router>
 
         <div className="App">
-          <TopBar></TopBar>
+          <TopBar login={login}></TopBar>
           <NavBar></NavBar>
 
           <Routes>
             <Route path='/bookpage/:id' element={<BookPage bookList={bookList} addItem={addItem}/>} />
             <Route path='/payment' element={<Payment cart={cart} clearCart={clearCart} />} />
             <Route path='/cart' element={<CartPage cart={cart} deleteItem={deleteItem} clearCart={clearCart}/>} />
+            <Route path='/sign-in' element={<SignIn users={users} />} />
+            <Route path='/sign-up' element={<SignUp users={users} />} />
             <Route exact path="/" element={<Home bookList={bookList}/>} />
             <Route path="*" element={
               <div> Caminho nao existe</div>

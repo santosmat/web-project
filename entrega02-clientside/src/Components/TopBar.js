@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './TopBar.css'
 
-const TopBar = (props) => {
+const TopBar = ({login}) => {
     return ( 
         <div className='top-bar'>
             <Link to='/'>
@@ -10,11 +10,11 @@ const TopBar = (props) => {
             </Link>
             <div className='nav-itens'>
 
-                <Link to='/'>
+                <Link className={`${login ? '.hidden' : ''}`} to='/sign-in'>
                     sign in
                 </Link>
                 
-                <Link to='/'>
+                <Link to='/sign-up'>
                     Sign up
                 </Link>
                 

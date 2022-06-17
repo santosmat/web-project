@@ -1,18 +1,15 @@
 import React, { useState } from 'react';
 import { validate } from 'uuid';
 import * as yup from 'yup';
+import {Navigate, useNavigate} from 'react-router-dom'
 
 
 const PaymentForm = (props) => {
 
-    
-    // Refazer os formularios usando o useForm();
     // Fazer função que verifica os dados corretamente, limpa carrinho e finaliza compra no submit
-    // Adicionar campo para cpf e data de nascimento
+    const navigate = useNavigate();
 
-   
-
-    const [status, setStatus] = useState({ // Validação do formulario e exibição de
+    const [status, setStatus] = useState({ // Validação do formulario e exibição de sucesso / erro
         type: '',
         message: ''
     })
@@ -28,10 +25,15 @@ const PaymentForm = (props) => {
     const handleSubmit = async (e) =>{
         e.preventDefault();
 
+        //VALIDAR DADOS
 
-
-        const paymentData = {name,userId,bornDate,email, card, address}
+        window.alert("Compra realizada com sucesso!!")
+        const paymentData = {name,userId,bornDate,email, card, address} // Junta os dados em um unico obj
         console.log(paymentData)
+
+        props.clearCart();
+        navigate('/')
+        
 
     }
 
@@ -63,7 +65,7 @@ const PaymentForm = (props) => {
                     Endereço:
                     <input type='text' value={address} onChange={(e) =>{setAddress(e.target.value)}} />
                 </label>
-                <input className='payment-submit btn' value='Finalizar a compra' type='submit' />
+                    <input className='payment-submit btn' value='Finalizar a compra' type='submit' />
             </form>
         </div>
      );
