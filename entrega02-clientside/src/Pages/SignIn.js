@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Sign.css'
-const SignIn = ({users}) => {
+const SignIn = ({users, doLogin}) => {
 
     const [login, setLogin] = useState(""); // Recebe credenciais de login do input
     const [pass, setPass] = useState(""); // Recebe credenciais de senha do input
@@ -8,6 +9,9 @@ const SignIn = ({users}) => {
         type: '',
         message: ''
     })
+    const navigate = useNavigate();
+
+    console.log(users)
 
     const handleSubmit = (e) =>
     {
@@ -23,18 +27,19 @@ const SignIn = ({users}) => {
         {
             setStatus({type: "Sucesso", message:"Login efetuado com sucesso!!"})
             localStorage.setItem('isLogged', true)
-            localStorage.setItem('user', user[0])
+            localStorage.setItem('user', JSON.stringify(user[0]))
+            doLogin(true, user[0])
             window.alert(`Olá ${user[0].name}, login efetuado com sucesso!!`)
+            console.log(localStorage)
+            navigate('/')
+
         }
         else
         {
             setStatus({type: 'failed', message:'Login ou senha invalido!!'})
             window.alert(`Login ou senha invalidos!!`)
         }
-        console.log(status)
-
         
-
     }
 
 
