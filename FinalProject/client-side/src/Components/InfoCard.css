@@ -1,0 +1,82 @@
+.container-fluid{
+    width: 60%;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    background-color: #fff;
+    margin: 10px auto;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.book-img{
+    margin: 15px;
+    margin-left: 50px;
+     /* flex: 0 0 40%;  */
+}
+.book-img img{
+    width: 350px;
+}
+
+.payment{
+    flex: 0 0 45%; 
+    border: 1px solid transparent;
+    border-radius: 6px;
+    margin: 50px;
+    padding: 20px;
+    text-align: center;
+    -webkit-box-shadow: 0px 0px 5px 1px #000000; 
+    box-shadow: 0px 0px 5px 1px #000000;
+
+
+}
+
+.book-title{
+    color: #323a46;
+    font-size: 30px;
+    font-weight: 500;
+    margin-top: 0;
+}
+
+.book-subtitle{
+    font-size: 15px;
+    font-weight: 400;
+    color: #6c757d;
+}
+
+.book-value{
+    margin: 30px 0;
+    font-size: 32px;
+    color: #000;
+}
+
+.add-chart-btn{
+    margin: 10px;
+    padding: 20px;
+    width: 70%;
+    color: #000;
+    font-size: 24px;
+    font-weight: 700;
+    background-color: rgba(81, 122, 255, 0.90);
+    box-shadow: 0 0 0 0, 0 0 0 0;
+    border: 1px solid;
+}
+
+
+.buy-btn{
+    margin: 10px;
+    padding: 20px;
+    width: 70%;
+    color: #000;
+    font-size: 24px;
+    font-weight: 700;
+    background-color: rgba(81, 122, 255, 0.90);
+    box-shadow: 0 0 0 0, 0 0 0 0;
+    border: 1px solid;
+}
+
+.btn:hover{
+    background-color: rgb(77, 116, 250, 1.0);
+    cursor: pointer;
+}

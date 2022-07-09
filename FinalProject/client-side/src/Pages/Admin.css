@@ -1,0 +1,29 @@
+.btn{
+    margin: 10px;
+    padding: 20px;
+    width: 30%;
+    color: #000;
+    font-size: 24px;
+    font-weight: 700;
+    background-color: rgba(81, 122, 255, 0.90);
+    box-shadow: 0 0 0 0, 0 0 0 0;
+    border: 1px solid;
+}
+
+.admin-page{
+    padding: 10px;
+}
+
+.admin-page h1{
+    text-align: center;
+}
+
+.admin-page ul {
+    list-style: none;
+    text-align: center;
+}
+
+.admin-page li {
+    padding: 10px;
+    margin: 10px;
+}
