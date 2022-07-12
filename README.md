@@ -1,10 +1,11 @@
 # Projeto disciplina de web - Book store
 
-Mateus de Souza Santos 11366913 
 
 Fabio Henrique Alves Cavaleti 11200550 
 
-Leonardo Gabriel Fusineli Silva 11218841
+Gabriel Ribeiro Fonseca de Freitas - 12542651
+
+João Victor Dionizio de Oliveira Santos - 12543912
 
 
 ## Requisitos

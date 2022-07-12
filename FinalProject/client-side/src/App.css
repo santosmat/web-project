@@ -1,0 +1,45 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+a, a:link, a:hover{
+  text-decoration: none;
+  color: black;
+}
+
+body{
+  background-color: #ddd;
+}
+
+.hidden{
+  visibility: hidden;
+  display: none;
+}
+
+.books-container{
+  clear: both;
+  padding: 0;
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 1.5rem;
+}
+
+.book-item{
+  flex: 0 0 25%;
+  background-color: #fff;
+  padding: 1.9rem 2.1rem 1rem;
+  border-right: 1px solid #efefef;
+  border-bottom: 1px solid #efefef;
+  list-style: none;
+  position: relative;
+  justify-content: center;
+}
+.book{
+  mangin: 0%;
+}
