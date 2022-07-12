@@ -63,7 +63,6 @@ function App() {
     setCart(filteredCart);
   }
 
-
   /* GERENCIAMENTO DOS LIVROS */
   const addBook = (titulo, autores, valor, editora, edicao, descricao) =>
   {
@@ -83,7 +82,6 @@ function App() {
   console.log("usr", users)
   
   return (
-
         <div className="App">
           <TopBar login={login} handleLogout={handleLogout}></TopBar>
           <NavBar></NavBar>
@@ -103,11 +101,7 @@ function App() {
             <Route path="*" element={
               <div> Caminho nao existe</div>
             } />
-         </Routes>
-            
-          
-
-              
+          </Routes>
           <Footer></Footer>
         </div>
   );

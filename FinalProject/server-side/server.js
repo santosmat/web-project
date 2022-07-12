@@ -15,11 +15,6 @@ const PORT = 3000;
 const app = express();
 dotenv.config();
 
-
-
-
-
-
 // Conectando com o banco
 mongoose.connect('mongodb+srv://Trab:web123@cluster0.8j71s.mongodb.net/bookstore', {
     useNewUrlParser: true,
